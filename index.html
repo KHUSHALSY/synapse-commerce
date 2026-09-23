@@ -244,7 +244,8 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ videoUrl: url })
         });
-        const data = await res.json();
+        // Fixed: changed res.json() to response.json() to match the variable name above
+        const data = await response.json();
 
         if (data.status === 'success') {
           document.getElementById('val-score').textContent = data.ai_analysis.engagement_score;
