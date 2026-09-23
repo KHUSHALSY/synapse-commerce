@@ -239,7 +239,7 @@
       toast.classList.remove('show');
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/analyze-video', {
+        const response = await fetch('https://synapse-commerce.onrender.com/api/analyze-video', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ videoUrl: url })
